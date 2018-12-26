@@ -12,17 +12,20 @@ class FoodTrackerViewController: UIViewController {
 
 	let foodTrackerPresenter: FoodTrackerPresenter = DependencyInjectionUtils.provideFoodTrackerPresenter()
 
-	// MARK: Properties
+	// MARK: View Properties
 
 	@IBOutlet weak var mealNameLabel: UILabel!
 	@IBOutlet weak var mealNameTextField: UITextField!
 
+	// MARK: View Lifecycle
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		foodTrackerPresenter.setUpView(foodTrackerView: self)
+		setUpView()
+		initializePresenter()
 	}
 
-	// MARK: Actions
+	// MARK: View Actions
 
 	@IBAction func onSetDefaultMealNameButtonTapped(_ sender: Any) {
 		foodTrackerPresenter.onSetDefaultMealNameButtonTapped()
@@ -30,12 +33,39 @@ class FoodTrackerViewController: UIViewController {
 
 }
 
-// MARK: FoodTrackerView protocol
+// MARK: FoodTrackerView methods
 
 extension FoodTrackerViewController: FoodTrackerView {
 
 	func setFoodNameLabelText(nameLabelText: String) {
 		self.mealNameLabel.text = nameLabelText
+	}
+}
+
+// MARK: UITextViewDelegate methods
+
+extension FoodTrackerViewController: UITextFieldDelegate {
+
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+		textField.resignFirstResponder()
+		return true
+	}
+
+	func textFieldDidEndEditing(_ textField: UITextField) {
+		foodTrackerPresenter.textFieldDidEndEditing(textFieldContent: textField.text)
+	}
+}
+
+// MARK: Private methods
+
+private extension FoodTrackerViewController {
+
+	func setUpView() {
+		mealNameTextField.delegate = self
+	}
+
+	func initializePresenter() {
+		foodTrackerPresenter.setUpView(foodTrackerView: self)
 	}
 }
 

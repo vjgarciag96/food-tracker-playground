@@ -36,7 +36,21 @@ extension FoodTrackerPresenter{
 extension FoodTrackerPresenter {
 
 	func onSetDefaultMealNameButtonTapped() {
-		foodTrackerView?.setFoodNameLabelText(nameLabelText: "Default Text")
+		setFoodNameLabelText(foodNameLabelText: "Default Text")
+	}
+
+	func textFieldDidEndEditing(textFieldContent: String?) {
+		guard let foodNameLabelText = textFieldContent else {return}
+		setFoodNameLabelText(foodNameLabelText: foodNameLabelText)
+	}
+}
+
+// MARK: Private methods
+
+private extension FoodTrackerPresenter {
+
+	func setFoodNameLabelText(foodNameLabelText: String) {
+		foodTrackerView?.setFoodNameLabelText(nameLabelText: foodNameLabelText)
 	}
 }
 
