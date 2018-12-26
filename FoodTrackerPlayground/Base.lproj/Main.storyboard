@@ -18,22 +18,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bi0-u9-Yji">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter meal name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bi0-u9-Yji">
                                 <rect key="frame" x="16" y="96" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Meal name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oam-Te-2ut">
-                                <rect key="frame" x="16" y="67" width="84" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oam-Te-2ut">
+                                <rect key="frame" x="16" y="67" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKQ-EE-qdz">
+                                <rect key="frame" x="16" y="134" width="343" height="30"/>
+                                <state key="normal" title="Set default label text"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Bi0-u9-Yji" firstAttribute="top" secondItem="Oam-Te-2ut" secondAttribute="bottom" constant="8" symbolic="YES" id="3vz-AN-bhY"/>
+                            <constraint firstItem="Bi0-u9-Yji" firstAttribute="leading" secondItem="cKQ-EE-qdz" secondAttribute="leading" id="IyB-eF-sDi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cKQ-EE-qdz" secondAttribute="trailing" constant="16" id="Jqx-UJ-eQW"/>
+                            <constraint firstItem="Oam-Te-2ut" firstAttribute="leading" secondItem="Bi0-u9-Yji" secondAttribute="leading" id="Ry7-sX-rhB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Oam-Te-2ut" secondAttribute="trailing" constant="16" id="aEM-1l-P3q"/>
+                            <constraint firstItem="cKQ-EE-qdz" firstAttribute="top" secondItem="Bi0-u9-Yji" secondAttribute="bottom" constant="8" symbolic="YES" id="hR8-Zm-wNO"/>
+                            <constraint firstItem="Oam-Te-2ut" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="47" id="hd6-fY-A7f"/>
+                            <constraint firstItem="Oam-Te-2ut" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="oze-yp-qo7"/>
+                            <constraint firstItem="Bi0-u9-Yji" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="zfQ-Mz-Bfl"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
