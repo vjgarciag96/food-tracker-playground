@@ -12,14 +12,8 @@ protocol FoodTrackerView {
 	func setFoodNameLabelText(nameLabelText: String)
 }
 
-class FoodTrackerPresenter
-: NSObject {
-
+class FoodTrackerPresenter {
 	private var foodTrackerView: FoodTrackerView?
-
-	override init() {
-		super.init()
-	}
 }
 
 // MARK: Initialization

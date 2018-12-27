@@ -37,17 +37,26 @@
                                     <action selector="onSetDefaultMealNameButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lYv-4T-Vv0"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MealPlaceholder" translatesAutoresizingMaskIntoConstraints="NO" id="hss-PY-USx">
+                                <rect key="frame" x="16" y="172" width="343" height="343"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hss-PY-USx" secondAttribute="height" multiplier="1:1" id="gFf-B5-Q9d"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Bi0-u9-Yji" firstAttribute="top" secondItem="Oam-Te-2ut" secondAttribute="bottom" constant="8" symbolic="YES" id="3vz-AN-bhY"/>
+                            <constraint firstItem="hss-PY-USx" firstAttribute="top" secondItem="cKQ-EE-qdz" secondAttribute="bottom" constant="8" id="IeK-qu-G6f"/>
                             <constraint firstItem="Bi0-u9-Yji" firstAttribute="leading" secondItem="cKQ-EE-qdz" secondAttribute="leading" id="IyB-eF-sDi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cKQ-EE-qdz" secondAttribute="trailing" constant="16" id="Jqx-UJ-eQW"/>
                             <constraint firstItem="Oam-Te-2ut" firstAttribute="leading" secondItem="Bi0-u9-Yji" secondAttribute="leading" id="Ry7-sX-rhB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hss-PY-USx" secondAttribute="trailing" constant="16" id="TCW-gH-mDS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Oam-Te-2ut" secondAttribute="trailing" constant="16" id="aEM-1l-P3q"/>
                             <constraint firstItem="cKQ-EE-qdz" firstAttribute="top" secondItem="Bi0-u9-Yji" secondAttribute="bottom" constant="8" symbolic="YES" id="hR8-Zm-wNO"/>
                             <constraint firstItem="Oam-Te-2ut" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="47" id="hd6-fY-A7f"/>
                             <constraint firstItem="Oam-Te-2ut" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="oze-yp-qo7"/>
+                            <constraint firstItem="hss-PY-USx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="sU8-hl-bQy"/>
                             <constraint firstItem="Bi0-u9-Yji" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="zfQ-Mz-Bfl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -62,4 +71,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="MealPlaceholder" width="320" height="320"/>
+    </resources>
 </document>
