@@ -7,19 +7,17 @@
 //
 
 import Foundation
+import UIKit
 
 protocol FoodTrackerView {
 	func setFoodNameLabelText(nameLabelText: String)
+	func showImagePicker()
+	func hideImagePicker()
+	func showMealPhoto(mealPhoto: UIImage)
 }
 
-class FoodTrackerPresenter
-: NSObject {
-
+class FoodTrackerPresenter {
 	private var foodTrackerView: FoodTrackerView?
-
-	override init() {
-		super.init()
-	}
 }
 
 // MARK: Initialization
@@ -42,6 +40,23 @@ extension FoodTrackerPresenter {
 	func textFieldDidEndEditing(textFieldContent: String?) {
 		guard let foodNameLabelText = textFieldContent else {return}
 		setFoodNameLabelText(foodNameLabelText: foodNameLabelText)
+	}
+
+	func onMealPhotoTapped() {
+		foodTrackerView?.showImagePicker()
+	}
+
+	func onImagePickerControllerCanceled() {
+		foodTrackerView?.hideImagePicker()
+	}
+
+	func onImageSelected(selectedImageInfo: [UIImagePickerController.InfoKey : Any]) {
+		guard let selectedImage = selectedImageInfo[UIImagePickerController.InfoKey.originalImage] as? UIImage else {
+			fatalError("Expected a dictionary containing an image, but was provided the following: \(selectedImageInfo)")
+		}
+
+		foodTrackerView?.showMealPhoto(mealPhoto: selectedImage)
+		foodTrackerView?.hideImagePicker()
 	}
 }
 
