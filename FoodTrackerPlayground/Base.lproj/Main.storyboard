@@ -47,10 +47,23 @@
                                     <outletCollection property="gestureRecognizers" destination="XvR-5Y-BWe" appends="YES" id="iKC-HK-6px"/>
                                 </connections>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fxE-KJ-qU0" customClass="RatingControl" customModule="FoodTrackerPlayground" customModuleProvider="target">
+                                <rect key="frame" x="61.5" y="531" width="252" height="44"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="starSize">
+                                        <size key="value" width="44" height="44"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Bi0-u9-Yji" firstAttribute="top" secondItem="Oam-Te-2ut" secondAttribute="bottom" constant="8" symbolic="YES" id="3vz-AN-bhY"/>
+                            <constraint firstItem="fxE-KJ-qU0" firstAttribute="top" secondItem="hss-PY-USx" secondAttribute="bottom" constant="16" id="Cl4-rk-DF7"/>
+                            <constraint firstItem="fxE-KJ-qU0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Du5-vN-wrr"/>
                             <constraint firstItem="hss-PY-USx" firstAttribute="top" secondItem="cKQ-EE-qdz" secondAttribute="bottom" constant="8" id="IeK-qu-G6f"/>
                             <constraint firstItem="Bi0-u9-Yji" firstAttribute="leading" secondItem="cKQ-EE-qdz" secondAttribute="leading" id="IyB-eF-sDi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cKQ-EE-qdz" secondAttribute="trailing" constant="16" id="Jqx-UJ-eQW"/>

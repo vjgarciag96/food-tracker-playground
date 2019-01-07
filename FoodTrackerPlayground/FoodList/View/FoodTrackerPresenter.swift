@@ -17,12 +17,8 @@ protocol FoodTrackerView {
 }
 
 class FoodTrackerPresenter {
+	
 	private var foodTrackerView: FoodTrackerView?
-}
-
-// MARK: Initialization
-
-extension FoodTrackerPresenter{
 
 	func setUpView(foodTrackerView: FoodTrackerView) {
 		self.foodTrackerView = foodTrackerView

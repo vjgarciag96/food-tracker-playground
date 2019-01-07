@@ -16,6 +16,7 @@
 		3B45101621D3A2140083CF25 /* FoodTrackerPlaygroundUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B45101521D3A2140083CF25 /* FoodTrackerPlaygroundUITests.swift */; };
 		3B45102721D3CBA60083CF25 /* FoodTrackerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B45102621D3CBA60083CF25 /* FoodTrackerPresenter.swift */; };
 		3B45102B21D3CBC20083CF25 /* DependencyInjectionUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B45102A21D3CBC20083CF25 /* DependencyInjectionUtils.swift */; };
+		3B45102D21D55D2F0083CF25 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B45102C21D55D2F0083CF25 /* RatingControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		3B45101721D3A2140083CF25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B45102621D3CBA60083CF25 /* FoodTrackerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTrackerPresenter.swift; sourceTree = "<group>"; };
 		3B45102A21D3CBC20083CF25 /* DependencyInjectionUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjectionUtils.swift; sourceTree = "<group>"; };
+		3B45102C21D55D2F0083CF25 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 			children = (
 				3B450FF721D3A2120083CF25 /* FoodTrackerViewController.swift */,
 				3B45102621D3CBA60083CF25 /* FoodTrackerPresenter.swift */,
+				3B45102C21D55D2F0083CF25 /* RatingControl.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				3B45102B21D3CBC20083CF25 /* DependencyInjectionUtils.swift in Sources */,
 				3B450FF821D3A2120083CF25 /* FoodTrackerViewController.swift in Sources */,
 				3B45102721D3CBA60083CF25 /* FoodTrackerPresenter.swift in Sources */,
+				3B45102D21D55D2F0083CF25 /* RatingControl.swift in Sources */,
 				3B450FF621D3A2120083CF25 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
